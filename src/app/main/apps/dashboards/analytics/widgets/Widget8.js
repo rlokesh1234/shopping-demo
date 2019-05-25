@@ -32,7 +32,7 @@ class Widget8 extends Component {
                     <div className="p-16 pr-4 flex flex-row items-center justify-between">
 
                         <div className="pr-16">
-                            <Typography className="h1 font-300" color="inherit">Sales</Typography>
+                            <Typography className="h1 font-300" color="inherit">Marketplace sales</Typography>
                             <Typography className="h5" color="inherit">Lifetime sum of your sales</Typography>
                         </div>
 

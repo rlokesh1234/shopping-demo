@@ -16,16 +16,290 @@ const navigationConfig = [
                 'children': [
                     {
                         'id'   : 'analytics-dashboard',
-                        'title': 'Analytics',
+                        'title': 'Product',
                         'type' : 'item',
                         'url'  : '/apps/dashboards/analytics'
                     },
                     {
                         'id'   : 'project-dashboard',
-                        'title': 'Project',
+                        'title': 'Service',
                         'type' : 'item',
                         'url'  : '/apps/dashboards/project'
+                    }  
+                ]
+            },
+            {
+                'id' : 'users',
+                'title':'Users',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'listUsers',
+                        'title': 'List Users',
+                        'type' : 'item',
+                        'url'  : '/apps/users/list'
+                    },
+                    {
+                        'id'   : 'createNew',
+                        'title': 'Create New',
+                        'type' : 'item',
+                        'url'  : '/apps/users/create'
+                    }  
+                ]
+            },
+            {
+                'id' : 'shops',
+                'title':'Shops',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'shops',
+                        'title': 'Shops',
+                        'type' : 'item',
+                        'url'  : '/apps/shops/list'
+                    },
+                    {
+                        'id'   : 'createShop',
+                        'title': 'Shop Create',
+                        'type' : 'item',
+                        'url'  : '/apps/shops/create'
+                    }  
+                ]
+            },
+            {
+                'id' : 'products',
+                'title':'Products',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'products',
+                        'title':'Products',
+                        'type':'item',
+                        'url':'/apps/products',
+                    },
+                    {
+                        'id'   : 'createProducts',
+                        'title':'Products Create',
+                        'type':'item',
+                        'url':'/apps/products/create',
+                    },
+                    {
+                        'id'   : 'categories',
+                        'title':'Products categories',
+                        'type':'item',
+                        'url':'/apps/products/categories',
+                    },
+                    {
+                        'id'   : 'createProductsCategories',
+                        'title':'Products new category',
+                        'type':'item',
+                        'url':'/apps/products/categories/create',
+                    },
+                    {
+                        'id'   : 'options',
+                        'title':'Products options',
+                        'type':'item',
+                        'url':'/apps/products/options',
+                    },
+                    {
+                        'id'   : 'optionCreate',
+                        'title':'Create new option',
+                        'type':'item',
+                        'url':'/apps/products/options/create',
+                    },
+                ]
+            },
+            {
+                'id' : 'orders',
+                'title':'Orders',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'orders',
+                        'title': 'Orders',
+                        'type' : 'item',
+                        'url'  : '/apps/orders/list'
+                    },
+                    {
+                        'id'   : 'refunds',
+                        'title': 'Refunds',
+                        'type' : 'item',
+                        'url'  : '/apps/refunds'
+                    }  
+                ]
+            },
+            {
+                'id' : 'banners',
+                'title':'Banners',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'banners',
+                        'title': 'Banners',
+                        'type' : 'item',
+                        'url'  : '/apps/banners'
+                    },
+                    {
+                        'id'   : 'newBanners',
+                        'title': 'New Banners',
+                        'type' : 'item',
+                        'url'  : '/apps/banners/create'
+                    }  
+                ]
+            },
+            {
+                'id' : 'posts',
+                'title':'Posts',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'listing',
+                        'title': 'Listing',
+                        'type' : 'item',
+                        'url'  : '/apps/posts'
                     }
+                ]
+            },
+            {
+                'id' : 'newsLetter',
+                'title':'Newsletter',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'contacts',
+                        'title': 'Contacts',
+                        'type' : 'item',
+                        'url'  : '/apps/newsletter/contacts'
+                    },
+                    {
+                        'id'   : 'sendMail',
+                        'title': 'Sendmail',
+                        'type' : 'item',
+                        'url'  : '/apps/newsletter/sendmail'
+                    }  
+                ]
+            },
+            {
+                'id' : 'complaints',
+                'title':'Complaints',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'listing',
+                        'title': 'Listing',
+                        'type' : 'item',
+                        'url'  : '/apps/complaints'
+                    }
+                ]
+            },
+            {
+                'id' : 'requestPayout',
+                'title':'Request Payout',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'listing',
+                        'title': 'Listing',
+                        'type' : 'item',
+                        'url'  : '/apps/requestPayout'
+                    }
+                ]
+            },
+            {
+                'id' : 'report',
+                'title':'Report',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'sales',
+                        'title': 'Sales',
+                        'type' : 'item',
+                        'url'  : '/apps/report/sales'
+                    },
+                    {
+                        'id'   : 'payout',
+                        'title': 'Payout',
+                        'type' : 'item',
+                        'url'  : '/apps/report/pending'
+                    }  
+                ]
+            },
+            {
+                'id' : 'config',
+                'title':'Config',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'config',
+                        'title': 'Config',
+                        'type' : 'item',
+                        'url'  : '/apps/configs'
+                    },
+                    {
+                        'id'   : 'i18N',
+                        'title': 'i18n',
+                        'type' : 'collapse',
+                        'url'  : '/apps/starter',
+                        'children':[
+                            {
+                                'id'   : 'languages',
+                                'title': 'Languages',
+                                'type' : 'item',
+                                'url'  : '/apps/i18n/languages'
+                            },
+                            {
+                                'id'   : 'text',
+                                'title': 'Text',
+                                'type' : 'item',
+                                'url'  : '/apps/i18n/text'
+                            },
+                        ]
+                    }  
+                ]
+            },
+            {
+                'id' : 'packages',
+                'title':'Packages',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'packages',
+                        'title': 'Packages',
+                        'type' : 'item',
+                        'url'  : '/apps/packages'
+                    },
+                    {
+                        'id'   : 'packagesCreate',
+                        'title': 'Packages Create',
+                        'type' : 'item',
+                        'url'  : '/apps/packages/create'
+                    },
+                    {
+                        'id'   : 'packagesHistory',
+                        'title': 'Packages Payment History',
+                        'type' : 'item',
+                        'url'  : '/apps/packages/history'
+                    },
+                     
+                ]
+            },
+            {
+                'id' : 'myProfile',
+                'title':'MyProfile',
+                'type': 'collapse',
+                'children':[
+                    {
+                        'id'   : 'myProfile',
+                        'title': 'My Profile',
+                        'type' : 'item',
+                        'url'  : '/apps/profile/update'
+                    },
+                    {
+                        'id'   : 'logout',
+                        'title': 'Logout',
+                        'type' : 'item',
+                        'url'  : '#'
+                    }  
                 ]
             },
             {
@@ -34,57 +308,6 @@ const navigationConfig = [
                 'type' : 'item',
                 'icon' : 'today',
                 'url'  : '/apps/calendar'
-            },
-            {
-                'id'      : 'e-commerce',
-                'title'   : 'E-Commerce',
-                'type'    : 'collapse',
-                'icon'    : 'shopping_cart',
-                'url'     : '/apps/e-commerce',
-                'children': [
-                    {
-                        'id'   : 'e-commerce-products',
-                        'title': 'Products',
-                        'type' : 'item',
-                        'url'  : '/apps/e-commerce/products',
-                        'exact': true
-                    },
-                    {
-                        'id'   : 'e-commerce-product-detail',
-                        'title': 'Product Detail',
-                        'type' : 'item',
-                        'url'  : '/apps/e-commerce/products/1/a-walk-amongst-friends-canvas-print',
-                        'exact': true
-                    },
-                    {
-                        'id'   : 'e-commerce-new-product',
-                        'title': 'New Product',
-                        'type' : 'item',
-                        'url'  : '/apps/e-commerce/products/new',
-                        'exact': true
-                    },
-                    {
-                        'id'   : 'e-commerce-orders',
-                        'title': 'Orders',
-                        'type' : 'item',
-                        'url'  : '/apps/e-commerce/orders',
-                        'exact': true
-                    },
-                    {
-                        'id'   : 'e-commerce-order-detail',
-                        'title': 'Order Detail',
-                        'type' : 'item',
-                        'url'  : '/apps/e-commerce/orders/1',
-                        'exact': true
-                    }
-                ]
-            },
-            {
-                'id'   : 'academy',
-                'title': 'Academy',
-                'type' : 'item',
-                'icon' : 'school',
-                'url'  : '/apps/academy'
             },
             {
                 'id'   : 'mail',
