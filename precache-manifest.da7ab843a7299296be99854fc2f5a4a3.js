@@ -12,28 +12,28 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/js/2.0fe4d5aa.chunk.js"
   },
   {
-    "revision": "3b4a9a0ecbd7b6d3e91054d1592f1036",
-    "url": "/shopping-demo/static/media/muli-latin-900italic.3b4a9a0e.woff"
+    "revision": "66c9d5ed7f4803424dda9b691851b222",
+    "url": "/shopping-demo/static/media/muli-latin-900.66c9d5ed.woff"
   },
   {
     "revision": "ab2cc0f5bf6b2fa36d38",
     "url": "/shopping-demo/static/js/main.f6c4227f.chunk.js"
   },
   {
-    "revision": "4db96c0d3eb472fa43f7",
-    "url": "/shopping-demo/static/js/runtime~main.d0b89024.js"
+    "revision": "0a28e4787924813d03d8",
+    "url": "/shopping-demo/static/js/runtime~main.b7ebff23.js"
   },
   {
-    "revision": "f99056b607ef79e25593f04506f5f744",
-    "url": "/shopping-demo/static/media/muli-latin-900italic.f99056b6.woff2"
+    "revision": "3b4a9a0ecbd7b6d3e91054d1592f1036",
+    "url": "/shopping-demo/static/media/muli-latin-900italic.3b4a9a0e.woff"
   },
   {
     "revision": "47429c56047298583dc5",
     "url": "/shopping-demo/static/js/5.175ceb41.chunk.js"
   },
   {
-    "revision": "66c9d5ed7f4803424dda9b691851b222",
-    "url": "/shopping-demo/static/media/muli-latin-900.66c9d5ed.woff"
+    "revision": "f99056b607ef79e25593f04506f5f744",
+    "url": "/shopping-demo/static/media/muli-latin-900italic.f99056b6.woff2"
   },
   {
     "revision": "c30f80ac63a16eb379a5",
@@ -272,12 +272,12 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/js/63.49616593.chunk.js"
   },
   {
-    "revision": "1d377d7d12225209a0e1",
-    "url": "/shopping-demo/static/js/64.ec424a74.chunk.js"
+    "revision": "c25592d5fee491743b6d",
+    "url": "/shopping-demo/static/js/64.151aee7e.chunk.js"
   },
   {
-    "revision": "e2e7f8becaddd482b0fd",
-    "url": "/shopping-demo/static/js/65.92959ada.chunk.js"
+    "revision": "936e82a60b8a80ba1c27",
+    "url": "/shopping-demo/static/js/65.88731660.chunk.js"
   },
   {
     "revision": "515a0deb3addffbe31d0",
@@ -580,10 +580,6 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/js/140.e176e5cb.chunk.js"
   },
   {
-    "revision": "ed5f4d703d12d159cda99d1cb125c217",
-    "url": "/shopping-demo/static/media/muli-latin-200italic.ed5f4d70.woff2"
-  },
-  {
     "revision": "1dfc66c75d0bc90cfbffb5076a7c6f90",
     "url": "/shopping-demo/static/media/muli-latin-200.1dfc66c7.woff2"
   },
@@ -596,8 +592,8 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/media/muli-latin-200italic.787c91cf.woff"
   },
   {
-    "revision": "6e03d5eb9f5824d4d419f37d4b251346",
-    "url": "/shopping-demo/static/media/muli-latin-300.6e03d5eb.woff"
+    "revision": "ed5f4d703d12d159cda99d1cb125c217",
+    "url": "/shopping-demo/static/media/muli-latin-200italic.ed5f4d70.woff2"
   },
   {
     "revision": "73d23299b229dfb09a7ee6a0e17cbb0b",
@@ -606,6 +602,10 @@ self.__precacheManifest = [
   {
     "revision": "49ef162ab65bc9d5186133d5da5b1530",
     "url": "/shopping-demo/static/media/muli-latin-300italic.49ef162a.woff2"
+  },
+  {
+    "revision": "6e03d5eb9f5824d4d419f37d4b251346",
+    "url": "/shopping-demo/static/media/muli-latin-300.6e03d5eb.woff"
   },
   {
     "revision": "25532f4b3540b5532803e457d0a6a192",
@@ -628,12 +628,12 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/media/muli-latin-400italic.688fb50a.woff"
   },
   {
-    "revision": "4273185a48871f908fe3dcf3ae0b394e",
-    "url": "/shopping-demo/static/media/muli-latin-600.4273185a.woff2"
-  },
-  {
     "revision": "0f2fbd56c70276163bf298818df7663c",
     "url": "/shopping-demo/static/media/muli-latin-600.0f2fbd56.woff"
+  },
+  {
+    "revision": "4273185a48871f908fe3dcf3ae0b394e",
+    "url": "/shopping-demo/static/media/muli-latin-600.4273185a.woff2"
   },
   {
     "revision": "7567e1367478a68772c8b79178e5fe40",
@@ -648,12 +648,12 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/media/muli-latin-700.d3703a0d.woff2"
   },
   {
-    "revision": "a6600f60df53aa945a5e7ddbfba1f813",
-    "url": "/shopping-demo/static/media/muli-latin-700.a6600f60.woff"
-  },
-  {
     "revision": "af763a17a259b819d020f2eff035d919",
     "url": "/shopping-demo/static/media/muli-latin-700italic.af763a17.woff2"
+  },
+  {
+    "revision": "a6600f60df53aa945a5e7ddbfba1f813",
+    "url": "/shopping-demo/static/media/muli-latin-700.a6600f60.woff"
   },
   {
     "revision": "00211c4acc40741e99c65632d29bcf1c",
@@ -692,7 +692,7 @@ self.__precacheManifest = [
     "url": "/shopping-demo/static/css/37.9172710e.chunk.css"
   },
   {
-    "revision": "f6765aea7c1adb2c6c251dd71d4c6366",
+    "revision": "3683e555e50e67a6ddb5fddfd2303f00",
     "url": "/shopping-demo/index.html"
   }
 ];
