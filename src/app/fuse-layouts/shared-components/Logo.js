@@ -21,7 +21,7 @@ function Logo({classes})
 {
     return (
         <div className={classNames(classes.root, "flex items-center")}>
-            <img className="logo-icon" src="assets/images/logos/ecommerce-logo-transparent.png" alt="logo"/>
+            <img className="logo-icon" src="assets/images/logos/Ecommerce.png" alt="logo"/>
         </div>
     );
 }
