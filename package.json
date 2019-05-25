@@ -79,6 +79,8 @@
     },
     "scripts": {
         "start": "yarn run tailwind && cross-env NODE_PATH=src react-scripts start",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "yarn run tailwind && node ./purge-tailwindcss.js && cross-env NODE_PATH=src GENERATE_SOURCEMAP=false react-scripts build",
         "tailwind": "./node_modules/.bin/tailwind build ./src/styles/tailwind.base.css -c ./tailwind.js -o ./src/styles/tailwind.css",
         "test": "cross-env NODE_PATH=src react-scripts test --env=node",

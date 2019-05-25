@@ -1,87 +1,57 @@
 import React, {Component} from 'react';
-import {withStyles, Button, MuiThemeProvider, Typography} from '@material-ui/core';
-import {FuseAnimate} from '@fuse';
-import {Line} from 'react-chartjs-2';
-import _ from '@lodash';
-import connect from 'react-redux/es/connect/connect';
-
-const styles = theme => ({
-    root: {
-        background     : 'linear-gradient(to right, ' + theme.palette.primary.dark + ' 0%, ' + theme.palette.primary.main + ' 100%)',
-    }
-});
+import {Icon, Typography, Select, Paper, IconButton} from '@material-ui/core';
 
 class Widget1 extends Component {
-
     state = {
-        dataset: '2017'
+        currentRange: this.props.widget.currentRange
     };
 
-    setDataSet = (dataset) => {
-        this.setState({dataset});
+    handleChangeSelect = (ev) => {
+        this.setState({[ev.target.name]: ev.target.value});
     };
 
     render()
     {
-        const {classes, mainThemeDark, data: dataRaw, theme} = this.props;
-        const {dataset} = this.state;
-        const data = _.merge({}, dataRaw);
-        const dataWithColors = data.datasets[dataset].map(obj => ({
-            ...obj,
-            borderColor              : theme.palette.secondary.main,
-            backgroundColor          : theme.palette.secondary.main,
-            pointBackgroundColor     : theme.palette.secondary.dark,
-            pointHoverBackgroundColor: theme.palette.secondary.main,
-            pointBorderColor         : theme.palette.secondary.contrastText,
-            pointHoverBorderColor    : theme.palette.secondary.contrastText
-        }));
+        const {widget} = this.props;
+        const {currentRange} = this.state;
 
         return (
-            <MuiThemeProvider theme={mainThemeDark}>
-                <div className={classes.root}>
-                    <div className="container relative p-16 sm:p-24 flex flex-row justify-between items-center">
-
-                        <FuseAnimate delay={100}>
-                            <div className="flex-col">
-                                <Typography className="h2">Monthly Shops</Typography>
-                                <Typography className="h5" color="textSecondary">Unique shops by months</Typography>
-                            </div>
-                        </FuseAnimate>
-
-                        <div className="flex flex-row items-center">
-                            {Object.keys(data.datasets).map((key) => (
-                                <Button
-                                    key={key}
-                                    className="py-8 px-12"
-                                    size="small"
-                                    onClick={() => this.setDataSet(key)}
-                                    disabled={key === dataset}
-                                >
-                                    {key}
-                                </Button>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="container relative h-200 sm:h-256 pb-16">
-                        <Line
-                            data={{
-                                labels  : data.labels,
-                                datasets: dataWithColors
-                            }}
-                            options={data.options}
-                        />
-                    </div>
+            <Paper className="w-full rounded-8 shadow-none border-1">
+                <div className="flex items-center justify-between pr-4 pl-16 pt-4">
+                    <Select
+                        native
+                        value={this.state.currentRange}
+                        onChange={this.handleChangeSelect}
+                        inputProps={{
+                            name: 'currentRange'
+                        }}
+                        disableUnderline={true}
+                    >
+                        {Object.entries(widget.ranges).map(([key, n]) => {
+                            return (
+                                <option key={key} value={key}>{n}</option>
+                            )
+                        })}
+                    </Select>
+                    <IconButton aria-label="more">
+                        <Icon>more_vert</Icon>
+                    </IconButton>
                 </div>
-            </MuiThemeProvider>
+                <div className="text-center pt-12 pb-28">
+                    <Typography
+                        className="text-72 leading-none text-blue">{widget.data.count[currentRange]}</Typography>
+                    <Typography className="text-16" color="textSecondary">{widget.data.label}</Typography>
+                </div>
+                <div className="flex items-center px-16 h-52 border-t-1">
+                    <Typography className="text-15 flex w-full" color="textSecondary">
+                        <span className="truncate">{widget.data.extra.label}</span>
+                        :
+                        <b className="pl-8">{widget.data.extra.count[currentRange]}</b>
+                    </Typography>
+                </div>
+            </Paper>
         );
     }
 }
 
-function mapStateToProps({fuse})
-{
-    return {
-        mainThemeDark: fuse.settings.mainThemeDark
-    }
-}
-
-export default withStyles(styles, {withTheme: true})(connect(mapStateToProps)(Widget1));
+export default Widget1;
