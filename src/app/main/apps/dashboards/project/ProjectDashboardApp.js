@@ -77,7 +77,8 @@ class ProjectDashboardApp extends Component {
 
     render()
     {
-        const {widgets, projects, classes} = this.props;
+        const {widgets, projects, classes,weatherData} = this.props;
+       
         const {tabValue, selectedProjectId, projectMenuEl} = this.state;
 
         if ( !widgets || !projects )
@@ -226,7 +227,7 @@ class ProjectDashboardApp extends Component {
                             <WidgetNow/>
                         </div>
                         <div className="widget w-full p-12">
-                            <WidgetWeather widget={widgets.weatherWidget}/>
+                            <WidgetWeather widget={weatherData}/>
                         </div>
                     </FuseAnimateGroup>
                 }
@@ -249,7 +250,8 @@ function mapDispatchToProps(dispatch)
 function mapStateToProps({projectDashboardApp})
 {
     return {
-        widgets : projectDashboardApp.widgets,
+        widgets : projectDashboardApp.widgets.data,
+        weatherData:projectDashboardApp.widgets.weatherWidget,
         projects: projectDashboardApp.projects
     }
 }
