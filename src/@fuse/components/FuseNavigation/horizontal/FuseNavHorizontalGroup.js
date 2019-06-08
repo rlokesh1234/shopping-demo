@@ -68,6 +68,7 @@ class FuseNavHorizontalGroup extends Component {
     render()
     {
         const {item, nestedLevel, userRole, classes, dense} = this.props;
+       
         const {open} = this.state;
 
         if ( item.auth && (!item.auth.includes(userRole) || (userRole !== 'guest' && item.auth.length === 1 && item.auth.includes('guest'))) )
@@ -88,9 +89,7 @@ class FuseNavHorizontalGroup extends Component {
                                 aria-owns={open ? 'menu-list-grow' : null}
                                 aria-haspopup="true"
                             >
-                                {item.icon && (
-                                    <Icon color="action" className="text-16 flex-no-shrink">{item.icon}</Icon>
-                                )}
+                              {item.icon && <img src={item.icon} alt="logo"/>}
                                 <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14'}}/>
                                 {nestedLevel > 0 && (
                                     <IconButton disableRipple className="w-16 h-16 ml-4 p-0">

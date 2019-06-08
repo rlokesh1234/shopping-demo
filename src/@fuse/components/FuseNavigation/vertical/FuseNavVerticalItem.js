@@ -51,6 +51,7 @@ const styles = theme => ({
 
 function FuseNavVerticalItem({item, classes, nestedLevel, userRole, navbarCloseMobile, active})
 {
+   
     if ( item.auth && (!item.auth.includes(userRole) || (userRole !== 'guest' && item.auth.length === 1 && item.auth.includes('guest'))) )
     {
         return null;
@@ -69,7 +70,7 @@ function FuseNavVerticalItem({item, classes, nestedLevel, userRole, navbarCloseM
             onClick={navbarCloseMobile}
             exact={item.exact}
         >
-            {item.icon && (
+          {item.icon && (
                 <Icon className="list-item-icon text-16 flex-no-shrink" color="action">{item.icon}</Icon>
             )}
             <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14 list-item-text-primary'}}/>

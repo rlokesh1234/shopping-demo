@@ -9,7 +9,7 @@ const navigationConfig = [
                 'id'      : 'dashboards',
                 'title'   : 'Dashboards',
                 'type'    : 'collapse',
-                'icon'    : 'dashboard',
+                'icon': 'assets/images/icons/dashboard.png',
                 'children': [
                     {
                         'id'   : 'analytics-dashboard',
@@ -29,7 +29,7 @@ const navigationConfig = [
                 'id' : 'users',
                 'title':'Users',
                 'type': 'collapse',
-                'icon': 'verified_user',
+                'icon': 'assets/images/icons/conference-16.png',
                 'children':[
                     {
                         'id'   : 'listUsers',
@@ -49,6 +49,7 @@ const navigationConfig = [
                 'id' : 'shops',
                 'title':'Shops',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/shop-16.png',
                 'children':[
                     {
                         'id'   : 'shops',
@@ -67,8 +68,8 @@ const navigationConfig = [
             {
                 'id' : 'products',
                 'title':'Products',
-                'icon': '',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/product-16.png',
                 'children':[
                     {
                         'id'   : 'products',
@@ -112,6 +113,7 @@ const navigationConfig = [
                 'id' : 'orders',
                 'title':'Orders',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/purchase-order-16.png',
                 'children':[
                     {
                         'id'   : 'orders',
@@ -130,6 +132,7 @@ const navigationConfig = [
             {
                 'id' : 'banners',
                 'title':'Banners',
+                'icon': 'assets/images/icons/bannericons8-billboard-30.png',
                 'type': 'collapse',
                 'children':[
                     {
@@ -150,6 +153,7 @@ const navigationConfig = [
                 'id' : 'posts',
                 'title':'Posts',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/new-post-16.png',
                 'children':[
                     {
                         'id'   : 'listing',
@@ -163,6 +167,7 @@ const navigationConfig = [
                 'id' : 'newsLetter',
                 'title':'Newsletter',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/newsletter_icons8-subscription-50.png',
                 'children':[
                     {
                         'id'   : 'contacts',
@@ -182,6 +187,7 @@ const navigationConfig = [
                 'id' : 'complaints',
                 'title':'Complaints',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/complain_icons8-strike-50.png',
                 'children':[
                     {
                         'id'   : 'listing',
@@ -195,6 +201,7 @@ const navigationConfig = [
                 'id' : 'requestPayout',
                 'title':'Request Payout',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/payout_icons8-request-money-50.png',
                 'children':[
                     {
                         'id'   : 'listing',
@@ -208,6 +215,7 @@ const navigationConfig = [
                 'id' : 'report',
                 'title':'Report',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/reports_icons8-combo-chart-26.png',
                 'children':[
                     {
                         'id'   : 'sales',
@@ -227,6 +235,7 @@ const navigationConfig = [
                 'id' : 'config',
                 'title':'Config',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/data-configuration-16.png',
                 'children':[
                     {
                         'id'   : 'config',
@@ -260,6 +269,7 @@ const navigationConfig = [
                 'id' : 'packages',
                 'title':'Packages',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/package-2-16.png',
                 'children':[
                     {
                         'id'   : 'packages',
@@ -286,6 +296,7 @@ const navigationConfig = [
                 'id' : 'myProfile',
                 'title':'MyProfile',
                 'type': 'collapse',
+                'icon': 'assets/images/icons/user-3-16.png',
                 'children':[
                     {
                         'id'   : 'myProfile',

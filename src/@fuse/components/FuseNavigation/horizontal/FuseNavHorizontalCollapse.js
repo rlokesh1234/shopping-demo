@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {withStyles, Grow, Paper, Icon, IconButton, ListItem, ListItemText} from '@material-ui/core';
-import {withRouter} from 'react-router-dom';
+import React, { Component } from 'react';
+import { withStyles, Grow, Paper, Icon, IconButton, ListItem, ListItemText } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {Manager, Reference, Popper} from 'react-popper';
+import { connect } from 'react-redux';
+import { Manager, Reference, Popper } from 'react-popper';
 import _ from '@lodash';
 import * as ReactDOM from 'react-dom';
 import FuseNavHorizontalGroup from './FuseNavHorizontalGroup';
@@ -15,9 +15,9 @@ import FuseNavBadge from './../FuseNavBadge';
 const propTypes = {
     item: PropTypes.shape(
         {
-            id      : PropTypes.string.isRequired,
-            title   : PropTypes.string,
-            icon    : PropTypes.string,
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string,
+            icon: PropTypes.string,
             children: PropTypes.array
         })
 };
@@ -25,25 +25,25 @@ const propTypes = {
 const defaultProps = {};
 
 const styles = theme => ({
-    root       : {
+    root: {
         '& .list-item-text': {
             padding: '0 0 0 16px'
         }
     },
-    button     : {
+    button: {
         minHeight: 48,
-        '&.open' : {
+        '&.open': {
             backgroundColor: 'rgba(0,0,0,.08)'
         },
         '&.dense': {
-            padding            : '8px 12px 8px 12px',
-            minHeight          : 40,
+            padding: '8px 12px 8px 12px',
+            minHeight: 40,
             '& .list-item-text': {
                 padding: '0 0 0 8px'
             }
         }
     },
-    popper     : {
+    popper: {
         zIndex: 999
     },
     popperClose: {
@@ -58,20 +58,18 @@ class FuseNavHorizontalCollapse extends Component {
     };
 
     handleToggle = _.debounce((open) => {
-        if ( this.state.open === open )
-        {
+        if (this.state.open === open) {
             return;
         }
-        this.setState({open});
+        this.setState({ open });
     }, 150);
 
-    render()
-    {
-        const {item, nestedLevel, classes, userRole, dense} = this.props;
-        const {open} = this.state;
+    render() {
+        const { item, nestedLevel, classes, userRole, dense } = this.props;
 
-        if ( item.auth && (!item.auth.includes(userRole) || (userRole !== 'guest' && item.auth.length === 1 && item.auth.includes('guest'))) )
-        {
+        const { open } = this.state;
+
+        if (item.auth && (!item.auth.includes(userRole) || (userRole !== 'guest' && item.auth.length === 1 && item.auth.includes('guest')))) {
             return null;
         }
 
@@ -79,7 +77,7 @@ class FuseNavHorizontalCollapse extends Component {
             <ul className={classNames(classes.root, "relative pl-0")}>
                 <Manager>
                     <Reference>
-                        {({ref}) => (
+                        {({ ref }) => (
                             <div ref={ref}>
                                 <ListItem
                                     button
@@ -91,11 +89,11 @@ class FuseNavHorizontalCollapse extends Component {
                                     aria-haspopup="true"
                                 >
                                     {item.icon && (
-                                        <Icon color="action" className="text-16 flex-no-shrink">{item.icon}</Icon>
+                                        <Icon className="list-item-icon text-16 flex-no-shrink" color="action">{item.icon}</Icon>
                                     )}
-                                    <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14'}}/>
+                                    <ListItemText className="list-item-text" primary={item.title} classes={{ primary: 'text-14' }} />
                                     {item.badge && (
-                                        <FuseNavBadge className="ml-8 mr-4" badge={item.badge}/>
+                                        <FuseNavBadge className="ml-8 mr-4" badge={item.badge} />
                                     )}
                                     <IconButton disableRipple className="w-16 h-16 ml-4 p-0">
                                         <Icon className="text-16 arrow-icon">keyboard_arrow_right</Icon>
@@ -110,7 +108,7 @@ class FuseNavHorizontalCollapse extends Component {
                             eventsEnabled={open}
                             positionFixed
                         >
-                            {({ref, style, placement, arrowProps}) => (
+                            {({ ref, style, placement, arrowProps }) => (
                                 <div
                                     ref={ref}
                                     style={{
@@ -118,9 +116,9 @@ class FuseNavHorizontalCollapse extends Component {
                                         zIndex: 999 + nestedLevel + 1
                                     }}
                                     data-placement={placement}
-                                    className={classNames(classes.popper, {[classes.popperClose]: !open})}
+                                    className={classNames(classes.popper, { [classes.popperClose]: !open })}
                                 >
-                                    <Grow in={open} id="menu-list-grow" style={{transformOrigin: '0 0 0'}}>
+                                    <Grow in={open} id="menu-list-grow" style={{ transformOrigin: '0 0 0' }}>
                                         <Paper
                                             onMouseEnter={() => this.handleToggle(true)}
                                             onMouseLeave={() => this.handleToggle(false)}
@@ -133,19 +131,19 @@ class FuseNavHorizontalCollapse extends Component {
                                                             <React.Fragment key={item.id}>
 
                                                                 {item.type === 'group' && (
-                                                                    <FuseNavHorizontalGroup item={item} nestedLevel={nestedLevel + 1} dense={dense}/>
+                                                                    <FuseNavHorizontalGroup item={item} nestedLevel={nestedLevel + 1} dense={dense} />
                                                                 )}
 
                                                                 {item.type === 'collapse' && (
-                                                                    <NavHorizontalCollapse item={item} nestedLevel={nestedLevel + 1} dense={dense}/>
+                                                                    <NavHorizontalCollapse item={item} nestedLevel={nestedLevel + 1} dense={dense} />
                                                                 )}
 
                                                                 {item.type === 'item' && (
-                                                                    <FuseNavHorizontalItem item={item} nestedLevel={nestedLevel + 1} dense={dense}/>
+                                                                    <FuseNavHorizontalItem item={item} nestedLevel={nestedLevel + 1} dense={dense} />
                                                                 )}
 
                                                                 {item.type === 'link' && (
-                                                                    <FuseNavHorizontalLink item={item} nestedLevel={nestedLevel + 1} dense={dense}/>
+                                                                    <FuseNavHorizontalLink item={item} nestedLevel={nestedLevel + 1} dense={dense} />
                                                                 )}
 
                                                             </React.Fragment>
@@ -166,8 +164,7 @@ class FuseNavHorizontalCollapse extends Component {
     };
 }
 
-function mapStateToProps({auth})
-{
+function mapStateToProps({ auth }) {
     return {
         userRole: auth.user.role
     }
@@ -176,6 +173,6 @@ function mapStateToProps({auth})
 FuseNavHorizontalCollapse.propTypes = propTypes;
 FuseNavHorizontalCollapse.defaultProps = defaultProps;
 
-const NavHorizontalCollapse = withStyles(styles, {withTheme: true})(withRouter(connect(mapStateToProps)(FuseNavHorizontalCollapse)));
+const NavHorizontalCollapse = withStyles(styles, { withTheme: true })(withRouter(connect(mapStateToProps)(FuseNavHorizontalCollapse)));
 
 export default NavHorizontalCollapse;

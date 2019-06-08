@@ -69,9 +69,10 @@ function FuseNavVerticalLink({item, classes, nestedLevel, userRole, navbarCloseM
             className={classNames(classes.item, listItemPadding, 'list-item', active)}
             onClick={navbarCloseMobile}
         >
-            {item.icon && (
+            {/* {item.icon && (
                 <Icon className="list-item-icon text-16 flex-no-shrink" color="action">{item.icon}</Icon>
-            )}
+            )} */}
+            {item.icon && <img src={item.icon} alt="logo"/>}
             <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14 list-item-text-primary'}}/>
             {item.badge && (
                 <FuseNavBadge badge={item.badge}/>

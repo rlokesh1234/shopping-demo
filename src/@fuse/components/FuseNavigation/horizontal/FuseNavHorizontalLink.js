@@ -53,6 +53,7 @@ const styles = theme => ({
 
 function FuseNavHorizontalLink({item, classes, nestedLevel, userRole, navbarCloseMobile, dense})
 {
+    
     if ( item.auth && (!item.auth.includes(userRole) || (userRole !== 'guest' && item.auth.length === 1 && item.auth.includes('guest'))) )
     {
         return null;
@@ -67,9 +68,10 @@ function FuseNavHorizontalLink({item, classes, nestedLevel, userRole, navbarClos
             className={classNames("list-item", classes.root, dense && "dense")}
             onClick={navbarCloseMobile}
         >
-            {item.icon && (
+            {/* {item.icon && (
                 <Icon className="list-item-icon text-16 flex-no-shrink" color="action">{item.icon}</Icon>
-            )}
+            )} */}
+           {item.icon && <img src={item.icon} alt="logo"/>}
             <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14 list-item-text-primary'}}/>
             {item.badge && (
                 <FuseNavBadge className="ml-8" badge={item.badge}/>

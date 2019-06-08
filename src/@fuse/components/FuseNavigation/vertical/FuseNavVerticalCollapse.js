@@ -102,6 +102,7 @@ class FuseNavVerticalCollapse extends Component
     render()
     {
         const {item, nestedLevel, classes, userRole, active} = this.props;
+       
         if ( item.auth && (!item.auth.includes(userRole) || (userRole !== 'guest' && item.auth.length === 1 && item.auth.includes('guest'))) )
         {
             return null;
@@ -116,9 +117,10 @@ class FuseNavVerticalCollapse extends Component
                     className={classNames(classes.item, listItemPadding, 'list-item', active)}
                     onClick={this.handleClick}
                 >
-                    {item.icon && (
+                    {/* {item.icon && (
                         <Icon color="action" className="text-16 flex-no-shrink">{item.icon}</Icon>
-                    )}
+                    )} */}
+                     {item.icon && <img src={item.icon} alt="logo"/>}
                     <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14'}}/>
                     {item.badge && (
                         <FuseNavBadge className="mr-4" badge={item.badge}/>
