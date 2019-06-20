@@ -38,7 +38,7 @@ const FuseNavigation = ({navigation, layout, active, dense, className}) =>
                             <FuseNavVerticalCollapse item={item} nestedLevel={0} active={active} dense={dense}/>
                         )}
 
-                        {item.type === 'item' && (
+                        {item.type === 'item || img' && (
                             <FuseNavVerticalItem item={item} nestedLevel={0} active={active} dense={dense}/>
                         )}
 

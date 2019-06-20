@@ -40,6 +40,13 @@ const rows = [
         sort          : true
     },
     {
+        id            : 'sellerName',
+        align         : 'left',
+        disablePadding: false,
+        label         : 'Seller Name',
+        sort          : true
+    },
+    {
         id            : 'priceTaxIncl',
         align         : 'right',
         disablePadding: false,

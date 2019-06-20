@@ -111,6 +111,7 @@ class ProductsTable extends Component {
     render()
     {
         const {order, orderBy, selected, rowsPerPage, page, data} = this.state;
+        //console.log(this.state,'state')
 
         return (
             <div className="w-full flex flex-col">
@@ -180,6 +181,10 @@ class ProductsTable extends Component {
 
                                             <TableCell className="truncate" component="th" scope="row">
                                                 {n.categories.join(', ')}
+                                            </TableCell>
+
+                                            <TableCell className="truncate" component="th" scope="row">
+                                                {n.sku}
                                             </TableCell>
 
                                             <TableCell component="th" scope="row" align="right">

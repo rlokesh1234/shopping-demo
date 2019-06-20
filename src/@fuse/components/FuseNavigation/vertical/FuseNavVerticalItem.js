@@ -73,6 +73,10 @@ function FuseNavVerticalItem({item, classes, nestedLevel, userRole, navbarCloseM
           {item.icon && (
                 <Icon className="list-item-icon text-16 flex-no-shrink" color="action">{item.icon}</Icon>
             )}
+
+{item.img && (
+                <img src={item.img} alt="icon" />
+            )}
             <ListItemText className="list-item-text" primary={item.title} classes={{primary: 'text-14 list-item-text-primary'}}/>
             {item.badge && (
                 <FuseNavBadge badge={item.badge}/>

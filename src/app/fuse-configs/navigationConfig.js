@@ -66,48 +66,11 @@ const navigationConfig = [
                 ]
             },
             {
-                'id' : 'products',
-                'title':'Products',
-                'type': 'collapse',
-                'icon': 'assets/images/icons/product-16.png',
-                'children':[
-                    {
-                        'id'   : 'products',
-                        'title':'Products',
-                        'type':'item',
-                        'url':'/pages/coming-soon',
-                    },
-                    {
-                        'id'   : 'createProducts',
-                        'title':'Products Create',
-                        'type':'item',
-                        'url':'/pages/coming-soon',
-                    },
-                    {
-                        'id'   : 'categories',
-                        'title':'Products categories',
-                        'type':'item',
-                        'url':'/pages/coming-soon',
-                    },
-                    {
-                        'id'   : 'createProductsCategories',
-                        'title':'Products new category',
-                        'type':'item',
-                        'url':'/pages/coming-soon',
-                    },
-                    {
-                        'id'   : 'options',
-                        'title':'Products options',
-                        'type':'item',
-                        'url':'/pages/coming-soon',
-                    },
-                    {
-                        'id'   : 'optionCreate',
-                        'title':'Create new option',
-                        'type':'item',
-                        'url':'/pages/coming-soon',
-                    },
-                ]
+                'id' : 'approveProducts',
+                'title':'Approve Products',
+                'type': 'item',
+                'img': 'assets/images/icons/product-16.png',
+                 url:'/apps/e-commerce/products'
             },
             {
                 'id' : 'orders',

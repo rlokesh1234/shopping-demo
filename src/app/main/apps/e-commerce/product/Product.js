@@ -92,6 +92,16 @@ class Product extends Component {
         this.setState({tabValue});
     };
 
+    handleApprove=(e)=>{
+        alert("Approved and published")
+        e.preventDefault();
+    }
+
+    handleReject=e=>{
+        alert("Resumbission request has been sent to seller")
+        e.preventDefault();
+    }
+
     handleChange = (event) => {
         this.setState({form: _.set({...this.state.form}, event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value)});
     };
@@ -261,7 +271,28 @@ class Product extends Component {
                                         }}
                                         isMulti
                                     />
+
+                                    <TextField
+                                    
+                                        className="mt-8 mb-16"
+                                        id="details"
+                                        name="Details"
+                                        onChange={this.handleChange}
+                                        label="Type your comments"
+                                        type="text"
+                                        value=""
+                                        multiline
+                                        rows={5}
+                                        variant="outlined"
+                                        fullWidth
+                                    />
+                                    <div className="flex w-full">
+                                        <div className="w-1/2">
+                                    <button className="bg-blue text-white p-12 rounded" onClick={this.handleApprove}>Approve and Publish</button></div>
+                                    <div className="text-right w-1/2"> <button className="bg-blue text-white p-12 rounded" onClick={this.handleReject}>Resubmission</button></div>
+                                    </div>
                                 </div>
+                                
                             )}
                             {tabValue === 1 && (
                                 <div>
@@ -349,6 +380,8 @@ class Product extends Component {
                                         fullWidth
                                         helperText="Add a compare price to show next to the real price"
                                     />
+
+                                    
 
                                 </div>
                             )}
