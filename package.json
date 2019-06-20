@@ -4,10 +4,9 @@
     "homepage": "https://rlokesh1234.github.io/shopping-demo",
     "private": true,
     "engines": {
-        "yarn": "1.9.4",
-        "node":"10.x"
-      },
-  
+        "yarn": "1.16.x",
+        "node": "10.x"
+    },
     "dependencies": {
         "@date-io/date-fns": "1.1.0",
         "@material-ui/core": "3.9.2",
@@ -17,6 +16,7 @@
         "axios": "0.18.0",
         "axios-mock-adapter": "1.16.0",
         "babel-polyfill": "7.0.0-beta.3",
+        "caniuse-lite": "1.0.30000974",
         "chart.js": "2.8.0",
         "date-fns": "2.0.0-alpha.27",
         "downshift": "3.2.7",
