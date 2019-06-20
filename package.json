@@ -4,7 +4,8 @@
     "homepage": "https://rlokesh1234.github.io/shopping-demo",
     "private": true,
     "engines": {
-        "yarn": "1.9.4"
+        "yarn": "1.9.4",
+        "node":"10.x"
       },
     "dependencies": {
         "@date-io/date-fns": "1.1.0",
