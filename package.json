@@ -3,6 +3,9 @@
     "version": "2.2.5",
     "homepage": "https://rlokesh1234.github.io/shopping-demo",
     "private": true,
+    "engines": {
+        "yarn": "1.9.4"
+      },
     "dependencies": {
         "@date-io/date-fns": "1.1.0",
         "@material-ui/core": "3.9.2",
